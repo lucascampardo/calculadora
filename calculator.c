@@ -1,11 +1,6 @@
 #include <stdio.h>
 
-main() {
-	start();
-	operation();
-}
-
-int start() {
+void start() {
 	printf("Bem-vindo!\n");
 }
 
@@ -38,6 +33,29 @@ int operation() {
 		printf("Resultado = %i", resultado);
 		break;
 	default:
-		printf("Erro");
+		printf("Erro\n");
+		break;
 	}
+}
+
+void chance(){
+	char resposta;
+	printf("Quer tentar novamente? S/n\n");
+		scanf("%c", &resposta);
+		switch(resposta){
+			case 'S' || 's':
+				operation();
+				break;
+				system('cls');
+
+			default:
+				printf("Até logo!");
+				break;
+		}
+}
+
+main() {
+	start();
+	operation();
+	chance();
 }
