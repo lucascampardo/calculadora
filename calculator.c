@@ -1,39 +1,43 @@
 #include <stdio.h>
 
-int main() {
+main() {
 	start();
 	operation();
-	return 0;
 }
 
 int start() {
-	printf("Welcome!\n");
+	printf("Bem-vindo!\n");
 }
 
 int operation() {
-	int n1, n2, op, result;
+	int n1, n2, op, resultado;
 	
-	printf("Type the first number:");
+	printf("Digite o primeiro numero:");
 	scanf("%i", &n1);
-	printf("Type the second number:");
+	printf("Digite o segundo numero:");
 	scanf("%i", &n2);
 	
-	printf("Choose the operation: 1 - Sum | 2 - Sub | 3 - Mult | 4 - Div\n");
+	printf("Escolha a operacao: 1 - Soma | 2 - Subtracao | 3 - Multiplicacao | 4 - Divisao\n");
 	scanf("%i", &op);
-	
-	if (op == 1) {
-		result = n1 + n2;
-		printf("The result is: %i", result);
-	} else if (op == 2) {
-		result = n1 - n2;
-		printf("The result is: %i", result);
-	} else if (op == 3) {
-		result = n1 * n2;
-		printf("The result is: %i", result);
-	} else if (op == 4) {
-		result = n1 / n2;
-		printf("The result is: %i", result);
-	} else {
-		printf("Error");
+
+	switch(op){
+		case 1:
+		resultado = n1 + n2;
+		printf("Resultado = %i", resultado);
+		break;
+	case 2:
+		resultado = n1 - n2;
+		printf("Resultado = %i", resultado);
+		break;
+	case 3:
+		resultado = n1 * n2;
+		printf("Resultado = %i", resultado);
+		break;
+	case 4:
+		resultado = n1 / n2;
+		printf("Resultado = %i", resultado);
+		break;
+	default:
+		printf("Erro");
 	}
 }
