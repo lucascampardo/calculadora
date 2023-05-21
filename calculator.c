@@ -43,13 +43,13 @@ void chance(){
 	printf("Quer tentar novamente? S/n\n");
 		scanf("%c", &resposta);
 		switch(resposta){
-			case 'S' || 's':
+			case 'S' | 's':
 				operation();
 				break;
-				system('cls');
+				//system('cls');
 
-			default:
-				printf("Até logo!");
+			case 'N' | 'n':
+				printf("Ate logo!");
 				break;
 		}
 }
